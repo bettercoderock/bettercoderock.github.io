@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.121.2"><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''>
-<title>My New Hugo Site</title>
+<title>Search</title>
 
-<link rel='canonical' href='https://example.org/'>
+<link rel='canonical' href='https://example.org/page/search/'>
 
-<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='My New Hugo Site'>
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='Search'>
 <meta property='og:description' content=''>
-<meta property='og:url' content='https://example.org/'>
+<meta property='og:url' content='https://example.org/page/search/'>
 <meta property='og:site_name' content='My New Hugo Site'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2024-01-15T00:00:00&#43;00:00 '/>
-<meta name="twitter:title" content="My New Hugo Site">
-<meta name="twitter:description" content=""><link rel="alternate" type="application/rss&#43;xml" href="https://example.org/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Page' />
+<meta name="twitter:title" content="Search">
+<meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="https://example.org/page/search/index.json"><link rel="preload" href="/page/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
-    <body class="">
+    <body class="template-search">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -73,7 +72,7 @@
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -132,7 +131,7 @@
         </li>
         
         
-        <li >
+        <li  class='current' >
             <a href='/page/search/' >
                 
                 
@@ -197,96 +196,34 @@
     </ol>
 </aside>
 
-    
-
             <main class="main full-width">
-    
-    
-    
-    
+<form action="/page/search/" class="search-form"data-json="/page/search/index.json">
+    <p>
+        <label>Search</label>
+        <input name="keyword" placeholder="Type something..." />
+    </p>
 
-    <section class="article-list">
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/post/test-chinese/">
-                
-                    <img src="/helena-hertz-wWZzXlDpMog-unsplash.jpg" loading="lazy" alt="Featured image of post Chinese Test" />
-                
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/test/" style="background-color: #2a9d8f; color: #fff;">
-                Test
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/post/test-chinese/">Chinese Test</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            这是一个副标题
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <button title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Sep 09, 2020</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
 </svg>
 
 
 
-                <time class="article-time--reading">
-                    1 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
+    </button>
+</form>
 
-    
+<div class="search-result">
+    <h3 class="search-result--title section-title"></h3>
+    <div class="search-result--list article-list--compact"></div>
 </div>
 
-</header>
-</article>
-        
-    </section>
+<script>
+    window.searchResultTitleTemplate = "#PAGES_COUNT pages (#TIME_SECONDS seconds)"
+</script><script type="text/javascript" src="/ts/search.js" defer></script>
+
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
@@ -299,6 +236,7 @@
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.21.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
 
             </main>
         </div>
